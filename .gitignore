@@ -185,4 +185,7 @@ cython_debug/
 
 # Support for Project snippet scope
 
+old_app.py
+old_app.py
+
 # End of https://www.toptal.com/developers/gitignore/api/python,database,visualstudiocode
