@@ -1,3 +1,4 @@
+from flask import session
 from .schema import Tax
 from . import Session
 
@@ -14,3 +15,10 @@ def stop(session):
 
 def string2float(string):
     return float(string.replace(',', '.'))
+
+def get_taxes():
+    session = Session()
+    taxes = session.query(Tax).limit(1000).all()
+    #taxes = session.query(Tax).all()
+    return taxes
+    

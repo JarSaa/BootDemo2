@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block body %}
+<h1>Corporate tax information for year 2020</h1>
+
+<table id="data" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Tax paid</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <th>Name</th>
+            <th>Tax paid</th>
+        </tr>
+    </tfoot>
+</table>    
+
+<script>
+    $(document).ready(function() {
+        $('#data').DataTable( {
+            "ajax": '/api/all',
+            responsive: true
+        } );
+    } );
+</script>
+
+{% endblock %}
